@@ -26,8 +26,6 @@ with open(out_file_path, 'wb') as out_file:
         output += "\t".join(["Row" + str(row_num + 1)] + discrete + numbers) + "\n"
 
         if row_num > 0 and row_num % 100 == 0:
-            #print(row_num)
-            #sys.stdout.flush()
             out_file.write(output.encode())
             output = ""
 
