@@ -70,7 +70,6 @@ resultFile=results/Compression.tsv
   doCompression $dataset gz 9 "cd data;gzip -9  < ${dataset} > ../compressed_data/${dataset}.gz.9" >> $resultFile
 
 #TODO: Figure out why the files are so much larger when compressing by line.
-#        Try a gradient of larger (and smaller?) sized blocks and see if that is the key difference.
 #        Understand more about how gzip works.
 #          https://www.youtube.com/watch?v=OtDxDvCpPL4 (high level intro)
 #          https://www.youtube.com/watch?v=ZEQRz7BmGtA (longer, probably useful)
@@ -81,13 +80,11 @@ resultFile=results/Compression.tsv
 #          https://datatracker.ietf.org/doc/html/rfc1950 (official specification for zlib)
 #          https://datatracker.ietf.org/doc/html/rfc1951 (official specification for deflate)
 #          https://datatracker.ietf.org/doc/html/rfc1952 (official specification for gzip)
-#      Try https://pypi.org/project/zopfli/
+#        Try a gradient of larger (and smaller?) sized blocks and see if that is the key difference.
+#
+#      Try https://pypi.org/project/zopfli/?
 #      Try it for zstd using a training dictionary.
 
-  # These lines compress the files one line at a time.
-#  doCompression $dataset gzip_lines 1 "python3 CompressLines.py ${dataset} gzip_lines 1" >> $resultFile
-#  doCompression $dataset gzip_lines 5 "python3 CompressLines.py ${dataset} gzip_lines 5" >> $resultFile
-#  doCompression $dataset gzip_lines 9 "python3 CompressLines.py ${dataset} gzip_lines 9" >> $resultFile
 
   #$dockerCommand python3 CompressLines.py ${dataset} bz2_lines 1
   #$dockerCommand python3 CompressLines.py ${dataset} bz2_lines 5
