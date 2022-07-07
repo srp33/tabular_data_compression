@@ -1,0 +1,7 @@
+Dataset	Compression_Scheme	Compression_Level	Elapsed_Seconds	Total_Bytes
+gencode.v40.gtf	bgz	1	3.952539	51967802
+gencode.v40.gtf	bgz	5	9.007732	41724215
+gencode.v40.gtf	bgz	9	14.122541	37635993
+gencode.v40.gtf	gz	1	5.104275	46709608
+gencode.v40.gtf	gz	5	8.481412	35396023
+gencode.v40.gtf	gz	9	15.359442	31004266
